@@ -1,0 +1,20 @@
+{
+  "name": "hapifhir-pg-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "hapi",
+    "database.server.name": "hapifhir",
+    "table.include.list": "public.hfj_res_ver",
+    "slot.name": "hapifhir_slot",
+    "publication.name": "hapifhir_pub",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "include.schema.changes": "false",
+    "topic.prefix": "postgres"
+  }
+}
