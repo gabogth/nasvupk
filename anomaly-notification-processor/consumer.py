@@ -1,6 +1,7 @@
 import os
 import time
 from kafka import KafkaConsumer, errors
+from kafka import KafkaConsumer
 
 
 def main():
