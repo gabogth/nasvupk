@@ -69,7 +69,7 @@ services:
      - POSTGRES_DB=hapi
     depends_on:
       - postgres
-  anomaly-procesor:
+  anomaly-processor:
     build:
       context: ./anomaly-notification-processor
     environment:
